@@ -1,5 +1,5 @@
 {
-  "name": "TiMaterialDesignTextfield",
+  "name": "Ti.MaterialDesignTextfield",
   "version": "1.0.0",
   "description": "Classic Titanium version of MaterialDesign-TextField (Hinttext is flying on focus to the top of field). ",
   "main": "index.js",
