@@ -178,7 +178,7 @@ var Widget = function(_args) {
 					});
 					//Animate out
 					return;
-				} else if (length == 1)
+				} else if (length >= 1)
 					counter.animate({
 						right : 0,
 						duration : 350
@@ -218,6 +218,7 @@ var Widget = function(_args) {
 		if (up)
 			_animation.ANIMATION_UP();
 		self.children[1].setValue(value);
+		self.children[1].fireEvent(_events.CHANGE, {}); //hier das Event feuern, der Payload kann leer bleiben
 	};
 	self.addEventListener = function(event, callback) {
 		self.children[1].addEventListener(event, function(e) {
