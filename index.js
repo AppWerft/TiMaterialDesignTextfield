@@ -169,7 +169,7 @@ var Widget = function(_args) {
 			self.add(counter);
 			//Add on change event listener
 			self.children[1].addEventListener(_events.CHANGE, function(event) {
-
+                var length = self.children[1].getValue().length;
 				//Animate check
 				if (length == 0) {
 					counter.animate({
