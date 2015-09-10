@@ -1,15 +1,15 @@
 {
   "name": "Ti.MaterialDesignTextfield",
-  "version": "1.0.3",
+  "version": "1.0.1",
   "description": "Classic Titanium version of MaterialDesign-TextField (Hinttext is flying on focus to the top of field). ",
   "main": "de.appwerft.materialdesigntextfield.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "titaniumManifest": {
-    "name" : "Ti.MaterialDesignTextfield",
-    "moduleid" :"de.appwerft.materialdesigntextfield",   
-    "guid" : "1ece5ac9-ff99-2462-4493-5551d986827e"
+    "name": "Ti.MaterialDesignTextfield",
+    "moduleid": "de.appwerft.materialdesigntextfield",
+    "guid": "1ece5ac9-ff99-2462-4493-5551d986827e"
   },
   "keywords": [
     "textfield",
@@ -18,5 +18,6 @@
     "Appcelerator"
   ],
   "author": "Rainer Schleevoigt",
-  "license": "MIT"
+  "license": "MIT",
+  "_nativeDependencies": {}
 }

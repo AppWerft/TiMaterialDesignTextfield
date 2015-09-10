@@ -1,0 +1,10 @@
+version: 1.0.2
+description: Classic Titanium version of MaterialDesign-TextField (Hinttext is flying on focus to the top of field). 
+author: Rainer Schleevoigt
+license: MIT
+copyright: Copyright © 2015 Rainer Schleevoigt
+name: Ti.MaterialDesignTextfield
+moduleid: de.appwerft.materialdesigntextfield
+guid: 1ece5ac9-ff99-2462-4493-5551d986827e
+platform: commonjs
+minsdk: 3.2.0.GA

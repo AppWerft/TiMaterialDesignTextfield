@@ -1,3 +1,4 @@
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.TiMaterialDesignTextfield = f()}})(function(){var define,module,exports;return (function e(t,n,r){function o(i,u){if(!n[i]){if(!t[i]){var a=typeof require=="function"&&require;if(!u&&a)return a.length===2?a(i,!0):a(i);if(s&&s.length===2)return s(i,!0);if(s)return s(i);var f=new Error("Cannot find module '"+i+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[i]={exports:{}};t[i][0].call(l.exports,function(e){var n=t[i][1][e];return o(n?n:e)},l,l.exports,e,t,n,r)}return n[i].exports}var i=Array.prototype.slice;Function.prototype.bind||Object.defineProperty(Function.prototype,"bind",{enumerable:!1,configurable:!0,writable:!0,value:function(e){function r(){return t.apply(this instanceof r&&e?this:e,n.concat(i.call(arguments)))}if(typeof this!="function")throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");var t=this,n=i.call(arguments,1);return r.prototype=Object.create(t.prototype),r.prototype.contructor=r,r}});var s=typeof require=="function"&&require;for(var u=0;u<r.length;u++)o(r[u]);return o})({1:[function(require,module,exports){
 var isAndroid = (Ti.Platform.osname === 'android') ? true : false;
 
 var Widget = function(_args) {
@@ -169,7 +170,7 @@ var Widget = function(_args) {
 			self.add(counter);
 			//Add on change event listener
 			self.children[1].addEventListener(_events.CHANGE, function(event) {
-                var length = self.children[1].getValue().length;
+
 				//Animate check
 				if (length == 0) {
 					counter.animate({
@@ -178,7 +179,7 @@ var Widget = function(_args) {
 					});
 					//Animate out
 					return;
-				} else if (length >= 1)
+				} else if (length == 1)
 					counter.animate({
 						right : 0,
 						duration : 350
@@ -218,7 +219,6 @@ var Widget = function(_args) {
 		if (up)
 			_animation.ANIMATION_UP();
 		self.children[1].setValue(value);
-		self.children[1].fireEvent(_events.CHANGE, {}); //hier das Event feuern, der Payload kann leer bleiben
 	};
 	self.addEventListener = function(event, callback) {
 		self.children[1].addEventListener(event, function(e) {
@@ -242,3 +242,6 @@ var Widget = function(_args) {
 exports.createView = function(args) {
 	return new Widget(args);
 };
+
+},{}]},{},[1])(1)
+});
